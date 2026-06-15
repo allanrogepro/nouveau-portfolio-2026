@@ -1,0 +1,199 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-blue: #1F4A96;
+  --color-brand-olive: #C3C15B;
+  --color-brand-light: #ECE9E1;
+  --color-brand-dark: #1A1A1A;
+
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-sans);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 32px;
+  --radius-xl: 48px;
+  --radius-2xl: 64px;
+  --radius-full: 9999px;
+  --radius-bubble: 40px;
+}
+
+:root {
+  --background: #ECE9E1;
+  --foreground: #1A1A1A;
+
+  --primary: #1F4A96;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #C3C15B;
+  --secondary-foreground: #1A1A1A;
+
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+
+  --muted: #E2DFD6;
+  --muted-foreground: #5E5C55;
+
+  --accent: #C3C15B;
+  --accent-foreground: #1A1A1A;
+
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #D1CEC4;
+  --input: #D1CEC4;
+  --ring: #1F4A96;
+
+  --radius: 1rem;
+}
+
+.dark {
+  /* No dark mode needed per brand guidelines, but defined just in case */
+  --background: #1A1A1A;
+  --foreground: #ECE9E1;
+  --primary: #1F4A96;
+  --primary-foreground: #FFFFFF;
+  --secondary: #C3C15B;
+  --secondary-foreground: #1A1A1A;
+  --card: #2A2A2A;
+  --card-foreground: #ECE9E1;
+  --border: #333333;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-light text-brand-dark antialiased;
+    cursor: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight text-brand-blue;
+  }
+}
+
+.bg-grid {
+  position: relative;
+}
+
+.bg-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(26, 26, 26, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26, 26, 26, 0.05) 1px, transparent 1px);
+  animation: panGrid 10s linear infinite;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0px, transparent 100px, black 150px);
+  mask-image: linear-gradient(to bottom, transparent 0px, transparent 100px, black 150px);
+}
+
+@keyframes panGrid {
+  0% { background-position: 0 0; }
+  100% { background-position: -40px -40px; }
+}
+
+@keyframes morph {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    transform: rotate(0deg) scale(1);
+  }
+  33% {
+    border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+    transform: rotate(120deg) scale(1.1);
+  }
+  66% {
+    border-radius: 20% 50% 30% 50% / 50% 20% 80% 25%;
+    transform: rotate(240deg) scale(0.9);
+  }
+}
+
+.animate-morph {
+  animation: morph 12s ease-in-out infinite;
+  will-change: border-radius, transform;
+}
+
+.animate-morph-slow {
+  animation: morph 25s ease-in-out infinite;
+  will-change: border-radius, transform;
+}
+
+.animate-morph-fast {
+  animation: morph 8s ease-in-out infinite;
+  will-change: border-radius, transform;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-brand-olive);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+.custom-cursor.hover {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-brand-blue);
+}
+
+/* Organic Shapes & Bubbles Utilities */
+.bubble-shape {
+  border-radius: 40px;
+  position: relative;
+}
+
+.bubble-tail-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 40px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid var(--primary);
+}
+
+.clip-path-organic {
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.smooth-scroll {
+  will-change: transform;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
