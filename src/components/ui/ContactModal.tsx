@@ -182,6 +182,7 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
                 </button>
               </motion.div>
             )}
+            </div>
           </div>
         </motion.div>
       )}
