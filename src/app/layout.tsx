@@ -12,17 +12,17 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Allan Rogé | Graphic & Brand Designer",
-  description: "Portfolio of Allan Rogé, Graphic Designer, Brand Designer, and Future Creative Developer looking for a 2026 apprenticeship.",
-  keywords: ["Graphic Designer", "Brand Designer", "Portfolio", "Allan Rogé", "Creative Developer", "Apprenticeship 2026"],
+  title: "Allan Rogé | Designer et Communicant",
+  description: "Portfolio de Allan Rogé, Designer et Communicant à la recherche d'une alternance pour 2026.",
+  keywords: ["Designer", "Communicant", "Portfolio", "Allan Rogé", "Créatif", "Alternance 2026"],
   authors: [{ name: "Allan Rogé" }],
   creator: "Allan Rogé",
   openGraph: {
     type: "website",
     locale: "fr_FR",
     url: "https://www.allanroge.fr",
-    title: "Allan Rogé | Graphic & Brand Designer",
-    description: "Portfolio of Allan Rogé, Graphic Designer, Brand Designer, and Future Creative Developer looking for a 2026 apprenticeship.",
+    title: "Allan Rogé | Designer et Communicant",
+    description: "Portfolio de Allan Rogé, Designer et Communicant à la recherche d'une alternance pour 2026.",
     siteName: "Allan Rogé Portfolio",
     images: [
       {
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Allan Rogé | Graphic & Brand Designer",
-    description: "Portfolio of Allan Rogé, Graphic Designer, Brand Designer, and Future Creative Developer.",
+    title: "Allan Rogé | Designer et Communicant",
+    description: "Portfolio de Allan Rogé, Designer et Communicant à la recherche d'une alternance pour 2026.",
     images: ["/og-image.jpg"],
   },
   icons: {

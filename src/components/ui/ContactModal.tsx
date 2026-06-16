@@ -81,83 +81,84 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
             </button>
           </div>
 
-          <div className="flex-1 w-full max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-center h-[90vh]">
-            {!isSent ? (
-              <form onSubmit={handleSubmit} className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
-                
-                {/* Left Side: Big Typo */}
-                <div className="flex flex-col gap-6">
-                   <h2 className="text-5xl md:text-[6vw] font-black uppercase tracking-tighter text-brand-light leading-[0.85]">
-                     Lançons <br />
-                     <span className="text-brand-olive">Le Projet.</span>
-                   </h2>
-                   <p className="text-brand-light/50 font-medium text-xl max-w-sm mt-4 mb-2">
-                     Remplissez le formulaire ou envoyez-moi un email directement à : <br/>
-                     <a href="mailto:allanrogepro@gmail.com" className="text-brand-light font-bold hover:text-brand-olive transition-colors hover-target mt-2 inline-block text-lg">allanrogepro@gmail.com</a>
-                   </p>
-                   
-                   <div className="flex gap-4 mt-2">
-                     <a href="https://www.linkedin.com/in/allan-roge-124747388/" target="_blank" rel="noopener noreferrer" className="text-brand-olive hover:text-brand-dark hover:bg-brand-olive transition-colors hover-target w-12 h-12 rounded-full border border-brand-olive/50 flex items-center justify-center">
-                       <LinkedinIcon size={20} />
-                     </a>
-                     <a href="#" className="text-brand-olive hover:text-brand-dark hover:bg-brand-olive transition-colors hover-target w-12 h-12 rounded-full border border-brand-olive/50 flex items-center justify-center">
-                       <InstagramIcon size={20} />
-                     </a>
-                   </div>
-                </div>
-
-                {/* Right Side: Classic Form */}
-                <div className="flex flex-col gap-8 w-full max-w-xl">
-                  <div className="flex flex-col gap-2 relative">
-                    <input 
-                      type="text" 
-                      id="name"
-                      placeholder=" "
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className="peer bg-transparent border-b-2 border-brand-light/20 py-4 focus:outline-none focus:border-brand-olive transition-colors text-2xl font-bold w-full"
-                    />
-                    <label htmlFor="name" className="absolute top-4 left-0 text-brand-light/50 text-xl transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-olive peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs cursor-text">
-                      Votre Nom
-                    </label>
-                  </div>
-
-                  <div className="flex flex-col gap-2 relative">
-                    <input 
-                      type="email" 
-                      id="email"
-                      placeholder=" "
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="peer bg-transparent border-b-2 border-brand-light/20 py-4 focus:outline-none focus:border-brand-olive transition-colors text-2xl font-bold w-full"
-                    />
-                    <label htmlFor="email" className="absolute top-4 left-0 text-brand-light/50 text-xl transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-olive peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs cursor-text">
-                      Adresse Email
-                    </label>
-                  </div>
-
-                  <div className="flex flex-col gap-2 relative">
-                    <textarea 
-                      id="message"
-                      rows={2}
-                      placeholder=" "
-                      required
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      className="peer bg-transparent border-b-2 border-brand-light/20 py-4 focus:outline-none focus:border-brand-olive transition-colors text-2xl font-bold w-full resize-none"
-                    />
-                    <label htmlFor="message" className="absolute top-4 left-0 text-brand-light/50 text-xl transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-olive peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs cursor-text">
-                      Parlez-moi de votre projet
-                    </label>
-                  </div>
+          <div className="flex-1 w-full max-w-7xl mx-auto px-6 md:px-12 overflow-y-auto">
+            <div className="min-h-full flex items-center justify-center py-8 md:py-0">
+              {!isSent ? (
+                <form onSubmit={handleSubmit} className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
                   
-                  <button type="submit" disabled={isSending} className="mt-4 px-8 py-5 bg-brand-light text-brand-blue rounded-full font-bold text-lg uppercase tracking-widest hover:bg-brand-olive hover:text-brand-dark transition-colors flex items-center justify-center gap-4 hover-target disabled:opacity-50 disabled:cursor-not-allowed">
-                    {isSending ? "Envoi en cours..." : "Envoyer le message ↗"}
-                  </button>
-                </div>
-              </form>
+                  {/* Left Side: Big Typo */}
+                  <div className="flex flex-col gap-6">
+                     <h2 className="text-5xl md:text-[6vw] font-black uppercase tracking-tighter text-brand-light leading-[0.85]">
+                       Lançons <br />
+                       <span className="text-brand-olive">Le Projet.</span>
+                     </h2>
+                     <p className="text-brand-light/50 font-medium text-xl max-w-sm mt-4 mb-2">
+                       Remplissez le formulaire ou envoyez-moi un email directement à : <br/>
+                       <a href="mailto:allanrogepro@gmail.com" className="text-brand-light font-bold hover:text-brand-olive transition-colors hover-target mt-2 inline-block text-lg">allanrogepro@gmail.com</a>
+                     </p>
+                     
+                     <div className="flex gap-4 mt-2">
+                       <a href="https://www.linkedin.com/in/allan-roge-124747388/" target="_blank" rel="noopener noreferrer" className="text-brand-olive hover:text-brand-dark hover:bg-brand-olive transition-colors hover-target w-12 h-12 rounded-full border border-brand-olive/50 flex items-center justify-center">
+                         <LinkedinIcon size={20} />
+                       </a>
+                       <a href="#" className="text-brand-olive hover:text-brand-dark hover:bg-brand-olive transition-colors hover-target w-12 h-12 rounded-full border border-brand-olive/50 flex items-center justify-center">
+                         <InstagramIcon size={20} />
+                       </a>
+                     </div>
+                  </div>
+
+                  {/* Right Side: Classic Form */}
+                  <div className="flex flex-col gap-8 w-full max-w-xl">
+                    <div className="flex flex-col gap-2 relative">
+                      <input 
+                        type="text" 
+                        id="name"
+                        placeholder=" "
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({...formData, name: e.target.value})}
+                        className="peer bg-transparent border-b-2 border-brand-light/20 py-4 focus:outline-none focus:border-brand-olive transition-colors text-2xl font-bold w-full"
+                      />
+                      <label htmlFor="name" className="absolute top-4 left-0 text-brand-light/50 text-xl transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-olive peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs cursor-text">
+                        Votre Nom
+                      </label>
+                    </div>
+
+                    <div className="flex flex-col gap-2 relative">
+                      <input 
+                        type="email" 
+                        id="email"
+                        placeholder=" "
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({...formData, email: e.target.value})}
+                        className="peer bg-transparent border-b-2 border-brand-light/20 py-4 focus:outline-none focus:border-brand-olive transition-colors text-2xl font-bold w-full"
+                      />
+                      <label htmlFor="email" className="absolute top-4 left-0 text-brand-light/50 text-xl transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-olive peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs cursor-text">
+                        Adresse Email
+                      </label>
+                    </div>
+
+                    <div className="flex flex-col gap-2 relative">
+                      <textarea 
+                        id="message"
+                        rows={2}
+                        placeholder=" "
+                        required
+                        value={formData.message}
+                        onChange={(e) => setFormData({...formData, message: e.target.value})}
+                        className="peer bg-transparent border-b-2 border-brand-light/20 py-4 focus:outline-none focus:border-brand-olive transition-colors text-2xl font-bold w-full resize-none"
+                      />
+                      <label htmlFor="message" className="absolute top-4 left-0 text-brand-light/50 text-xl transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-brand-olive peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs cursor-text">
+                        Parlez-moi de votre projet
+                      </label>
+                    </div>
+                    
+                    <button type="submit" disabled={isSending} className="mt-4 px-8 py-5 bg-brand-light text-brand-blue rounded-full font-bold text-lg uppercase tracking-widest hover:bg-brand-olive hover:text-brand-dark transition-colors flex items-center justify-center gap-4 hover-target disabled:opacity-50 disabled:cursor-not-allowed">
+                      {isSending ? "Envoi en cours..." : "Envoyer le message ↗"}
+                    </button>
+                  </div>
+                </form>
             ) : (
               <motion.div 
                 initial={{ opacity: 0, scale: 0.9 }}
