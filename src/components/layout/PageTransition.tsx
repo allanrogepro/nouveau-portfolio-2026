@@ -18,7 +18,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
       setIsVisible(true);
       const timer = setTimeout(() => {
         setIsVisible(false);
-      }, 2000);
+      }, 1200); // 1200ms correspond exactement à la fin de l'animation
       return () => clearTimeout(timer);
     }
   }, [pathname, isFirstMount]);
