@@ -7,10 +7,21 @@ import { useEffect, useState } from "react";
 export default function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [isFirstMount, setIsFirstMount] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsFirstMount(false);
   }, []);
+
+  useEffect(() => {
+    if (!isFirstMount) {
+      setIsVisible(true);
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [pathname, isFirstMount]);
 
   const columns = 5;
 
@@ -28,7 +39,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
     <>
       {children}
 
-      {(!isFirstMount && isValidRoute && pathname !== "/" && !pathname.startsWith("/projet/") && pathname !== "/mentions-legales") && (
+      {(!isFirstMount && isValidRoute && pathname !== "/" && !pathname.startsWith("/projet/") && pathname !== "/mentions-legales" && isVisible) && (
         <div key={pathname} className="pointer-events-none fixed inset-0 z-[100] overflow-hidden">
           
           {/* Couche d'accent : Vert Olive (colonnes décalées) */}
