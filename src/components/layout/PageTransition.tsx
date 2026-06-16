@@ -29,7 +29,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
       {children}
 
       {(!isFirstMount && isValidRoute && pathname !== "/" && !pathname.startsWith("/projet/") && pathname !== "/mentions-legales") && (
-        <div key={pathname} className="pointer-events-none fixed inset-0 z-[100]">
+        <div key={pathname} className="pointer-events-none fixed inset-0 z-[100] overflow-hidden">
           
           {/* Couche d'accent : Vert Olive (colonnes décalées) */}
           <div className="absolute inset-0 flex">
