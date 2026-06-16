@@ -12,6 +12,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.allanroge.fr"),
   title: "Allan Rogé | Designer et Communicant",
   description: "Portfolio de Allan Rogé, Designer et Communicant à la recherche d'une alternance pour 2026.",
   keywords: ["Designer", "Communicant", "Portfolio", "Allan Rogé", "Créatif", "Alternance 2026"],
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Allan Rogé Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://www.allanroge.fr/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Allan Rogé Portfolio",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Allan Rogé | Designer et Communicant",
     description: "Portfolio de Allan Rogé, Designer et Communicant à la recherche d'une alternance pour 2026.",
-    images: ["/og-image.jpg"],
+    images: ["https://www.allanroge.fr/og-image.jpg"],
   },
   icons: {
     icon: "/logo.png",
