@@ -69,7 +69,7 @@ export default function ContactModal({ isOpen, onClose }: { isOpen: boolean; onC
           animate={{ clipPath: "circle(150% at 90% 10%)" }}
           exit={{ clipPath: "circle(0% at 90% 10%)", transition: { duration: 0.6, ease: "easeInOut" } }}
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-          className="fixed inset-0 z-[100] bg-brand-blue text-brand-light flex flex-col h-screen overflow-hidden"
+          className="fixed inset-0 z-[100] bg-brand-blue text-brand-light flex flex-col h-[100dvh] overflow-hidden"
         >
           {/* Header */}
           <div className="flex justify-end items-center px-6 md:px-12 py-8 w-full max-w-7xl mx-auto h-[10vh] shrink-0">
