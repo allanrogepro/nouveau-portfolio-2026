@@ -174,8 +174,8 @@ export const projects: Project[] = [
     resultHeadline: "Un rendu dynamique et moderne, parfaitement aligné avec la nouvelle vision électrique de Renault.",
     software: ["Photoshop", "Illustrator"],
     images: {
-      hero: "/Twingo/Etech.jpg",
-      main: "/Twingo/Etech.jpg",
+      hero: "/Twingo/twingo1.png",
+      main: "/Twingo/twingo1.png",
       detail1: "/Twingo/Etech.jpg",
       detail2: "/Twingo/twingo1.png",
     },
