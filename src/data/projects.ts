@@ -39,8 +39,8 @@ export const projects: Project[] = [
     resultHeadline: "Un processus créatif fluide soutenu par les meilleurs outils du marché pour un rendu optimal.",
     software: ["Figma", "Photoshop", "Illustrator"],
     images: {
-      hero: "/AYA/Affiche.jpg",
-      main: "/AYA/Affiche.jpg",
+      hero: "/AYA/Mockup.png",
+      main: "/AYA/Mockup.png",
       detail1: "/AYA/Affiche.jpg",
       detail2: "/AYA/Mockup.png"
     },
