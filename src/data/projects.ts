@@ -158,6 +158,28 @@ export const projects: Project[] = [
       detail2: "/Playboi/couverture.jpg",
     },
     tags: ["Web Design", "Développement", "Direction Artistique"]
+  },
+  {
+    slug: "Twingo-E-TECH",
+    title: "Twingo E-TECH",
+    category: "Affiches",
+    color: "bg-brand-blue",
+    size: "small",
+    role: "Designer",
+    year: "2026",
+    client: "Projet Personnel",
+    overview: "Création d'une affiche publicitaire pour le lancement de la nouvelle Renault Twingo E-Tech. L'objectif était de mettre en valeur le design néo-rétro et l'énergie 100% électrique de cette citadine mythique à travers un visuel percutant, moderne et audacieux.",
+    challenge: "Le défi principal consistait à moderniser l'image de la Twingo tout en conservant son ADN iconique et accessible. Il fallait concevoir une affiche capable de capter l'attention instantanément en milieu urbain, en illustrant la transition vers l'électrique (E-Tech) de manière dynamique. L'enjeu était de trouver le parfait équilibre entre la mise en valeur du véhicule aux lignes réinventées et une typographie impactante.",
+    process: "Le processus créatif a débuté par un travail de composition pour placer le véhicule au centre de l'attention. Un arrière-plan géométrique avec des faisceaux lumineux rouges et blancs a été créé pour évoquer l'énergie électrique et la vitesse. Ensuite, une typographie imposante a été choisie pour les mentions 'TWINGO' et 'E-TECH', en jouant sur les contrastes pour renforcer l'impact visuel. Enfin, l'intégration du texte descriptif et du logo Renault de manière épurée a permis d'équilibrer le visuel, le tout finalisé par des ajustements colorimétriques pour sublimer le rouge éclatant de la carrosserie.",
+    resultHeadline: "Un rendu dynamique et moderne, parfaitement aligné avec la nouvelle vision électrique de Renault.",
+    software: ["Photoshop", "Illustrator"],
+    images: {
+      hero: "/Twingo/Etech.jpg",
+      main: "/Twingo/Etech.jpg",
+      detail1: "/Twingo/Etech.jpg",
+      detail2: "/Twingo/twingo1.png",
+    },
+    tags: ["Web Design", "Développement", "Direction Artistique"]
   }
 ];
 
