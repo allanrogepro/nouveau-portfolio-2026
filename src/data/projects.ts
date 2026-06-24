@@ -180,6 +180,28 @@ export const projects: Project[] = [
       detail2: "/Twingo/twingo1.png",
     },
     tags: ["Web Design", "Développement", "Direction Artistique"]
+  },
+  {
+    slug: "All-Eyes-On-Me",
+    title: "All Eyes On Me",
+    category: "Affiches",
+    color: "bg-brand-blue",
+    size: "small",
+    role: "Designer",
+    year: "2026",
+    client: "Projet Personnel",
+    overview: "L'affiche All Eyes On Me est une composition surréaliste qui joue sur le sentiment d'oppression. En utilisant le motif répétitif de l'œil, j'ai voulu créer un effet de vortex qui attire irrémédiablement le regard du spectateur vers le centre. Le choix du noir et blanc très granuleux, percé uniquement par la typographie rouge sang, donne à l'ensemble une dimension très brute, rappelant les codes des affiches de thrillers ou du mouvement grunge.",
+    challenge: "Pour cette exploration, mon défi personnel était technique et compositionnel. Il fallait d'abord maîtriser la texture et la profondeur pour donner du volume à cette accumulation d'éléments sans rendre l'image plate, grâce à un travail minutieux sur les ombres et le bruit numérique. Le second défi était la focalisation : intégrer une typographie forte qui ne se noie pas dans le fond chargé, en utilisant la cassure chromatique avec le rouge vif pour diriger l'œil.",
+    process: "Ce projet est né d'une volonté d'expérimentation graphique libre, sans contrainte de brief ni de client. L'objectif de cet exercice de style était d'explorer une esthétique sombre et texturée, tout en travaillant sur une composition angoissante autour du thème de l'attention et du regard.",
+    resultHeadline: "Une exploration visuelle brute et immersive, maîtrisant les textures et les contrastes forts.",
+    software: ["Photoshop", "Illustrator"],
+    images: {
+      hero: "/AllEyes/mockupalleye.png",
+      main: "/AllEyes/mockupalleye.png",
+      detail1: "/AllEyes/ALLEYE.png",
+      detail2: "/AllEyes/mockupalleye.png",
+    },
+    tags: ["Affiche", "Illustration"]
   }
 ];
 
